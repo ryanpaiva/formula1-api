@@ -1,4 +1,4 @@
-import { Positions } from "./components/services/positions";
+import { Positions } from "./components/positions/positions";
 
 function App() {
   return (
