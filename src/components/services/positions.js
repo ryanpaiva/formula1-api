@@ -9,7 +9,7 @@ function Positions() {
     }, []);
 
     const fetchData = async () => {
-        const response = await fetch('http://ergast.com/api/f1/current/driverStandings.json');
+        const response = await fetch('https://ergast.com/api/f1/current/driverStandings.json');
         const data = await response.json();
         setDriverStandings(data.MRData.StandingsTable.StandingsLists[0].DriverStandings);
     };
