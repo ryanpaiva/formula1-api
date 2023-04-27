@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './positions.css'
 
 function Positions() {
@@ -30,7 +31,11 @@ function Positions() {
                     {driverStandings.map((driver) => (
                         <tr key={driver.Driver.driverId}>
                             <td>{driver.position}</td>
-                            <td><a target='_blank' href={`${driver.Driver.url}`}>{driver.Driver.givenName} {driver.Driver.familyName}</a></td>
+                            <td>
+                                <Link to={`./driver/${driver.Driver.driverId}`}>
+                                    {driver.Driver.givenName} {driver.Driver.familyName}
+                                </Link>
+                            </td>
                             <td>{driver.Constructors[0].name}</td>
                             <td>{driver.points}</td>
                         </tr>
@@ -40,5 +45,4 @@ function Positions() {
         </div>
     );
 }
-
 export { Positions }

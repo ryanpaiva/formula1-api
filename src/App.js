@@ -1,9 +1,9 @@
-import { Positions } from "./components/positions/positions";
+import { AppRouter } from './components/pages/routes.js';
 
 function App() {
   return (
     <>
-      <Positions />
+      <AppRouter />
     </>
   );
 }
