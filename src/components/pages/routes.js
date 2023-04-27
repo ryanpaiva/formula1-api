@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { DriverDetails } from '../driverDetails'
+import { DriverDetails } from '../driverDetails/driverDetails'
 import { Home } from './home.js'
 
 const AppRouter = () => {

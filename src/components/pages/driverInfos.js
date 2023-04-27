@@ -1,4 +1,4 @@
-import { DriverDetails } from "../driverDetails";
+import { DriverDetails } from "../driverDetails/driverDetails";
 
 const DriverInfo = () => {
     return (
