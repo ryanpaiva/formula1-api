@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import styled from 'styled-components';
+import { HeaderMenu } from '../header/header';
+import { Footer } from '../footer/footer';
 
 function DriverDetails() {
     const [driver, setDriver] = useState(null);
@@ -17,65 +19,86 @@ function DriverDetails() {
     };
 
     if (!driver) {
-        return <div>Loading...</div>;
+        return <Loading><p>Loading...</p></Loading>;
     }
 
     return (
-        <DivBody>
-            <Div>
-                <DivName>
-                    <h1>{driver.Driver.givenName} {driver.Driver.familyName}</h1>
-                </DivName>
-                <ButtonName>
-                    <a target='_blank' href={driver.Driver.url}>Saiba mais sobre {driver.Driver.givenName} {driver.Driver.familyName}
-                    </a>
-                </ButtonName>
-                <Table>
-                    <tbody>
-                        <tr>
-                            <td>Posição:</td>
-                            <td>{driver.position}</td>
-                        </tr>
-                        <tr>
-                            <td>Equipe:</td>
-                            <td>{driver.Constructors[0].name}</td>
-                        </tr>
-                        <tr>
-                            <td>Pontos:</td>
-                            <td>{driver.points}</td>
-                        </tr>
-                        <tr>
-                            <td>Número:</td>
-                            <td>{driver.Driver.permanentNumber}</td>
-                        </tr>
-                        <tr>
-                            <td>Nacionalidade:</td>
-                            <td>{driver.Driver.nationality}</td>
-                        </tr>
-                        <tr>
-                            <td>Vitórias na temporada:</td>
-                            <td>{driver.wins}</td>
-                        </tr>
-                    </tbody>
-                </Table>
-            </Div>
-            <ButtonHome>
-                <CustomLink to='/'>Voltar ao menu</CustomLink>
-            </ButtonHome>
-        </DivBody>
+        <>
+            <HeaderMenu />
+            <DivBody>
+                <Div>
+                    <DivName>
+                        <h1>{driver.Driver.givenName} {driver.Driver.familyName}</h1>
+                    </DivName>
+                    <ButtonName>
+                        <a target='_blank' href={driver.Driver.url}>Saiba mais sobre {driver.Driver.givenName} {driver.Driver.familyName}
+                        </a>
+                    </ButtonName>
+                    <Table>
+                        <tbody>
+                            <tr>
+                                <td>Posição:</td>
+                                <td>{driver.position}</td>
+                            </tr>
+                            <tr>
+                                <td>Equipe:</td>
+                                <td>{driver.Constructors[0].name}</td>
+                            </tr>
+                            <tr>
+                                <td>Pontos:</td>
+                                <td>{driver.points}</td>
+                            </tr>
+                            <tr>
+                                <td>Número:</td>
+                                <td>{driver.Driver.permanentNumber}</td>
+                            </tr>
+                            <tr>
+                                <td>Nacionalidade:</td>
+                                <td>{driver.Driver.nationality}</td>
+                            </tr>
+                            <tr>
+                                <td>Vitórias na temporada:</td>
+                                <td>{driver.wins}</td>
+                            </tr>
+                        </tbody>
+                    </Table>
+                </Div>
+                <ButtonHome>
+                    <CustomLink to='/'>Voltar ao menu</CustomLink>
+                </ButtonHome>
+            </DivBody>
+            <Footer />
+        </>
     );
 }
+
+const Loading =styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: #000;
+
+p {
+    font-size: 22px;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    padding: 10px;
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+`
 
 const DivBody = styled.div`
 display: flex;
 justify-content: center;
-background-image: url('assets/images/backgroundImg.jpg');
-background-size: cover ;
-background-repeat: no-repeat;
-background-position: center center;
-height: 100vh;
 align-items: center;
-flex-direction: column; 
+flex-direction: column;
+padding: 100px;
 `
 
 const Div = styled.div`
@@ -130,7 +153,7 @@ td{
 `
 
 const CustomLink = styled(Link)`
-color: #fff;
+color: #000;
 background-image: linear-gradient(to right, red, red);
 background-repeat: no-repeat;
 background-size: 0% 2px;
@@ -144,18 +167,18 @@ margin-top: 30px;
 width: 150px;
 height: 35px;
 border-radius: 15px;
-background-color: #000;
-border: 1px solid #fff;
+background-color: #fff;
+border: 1px solid #000;
 transition: 0.3s ease-in-out;
 
 &:hover{
-    background-color: #e5e5e5;
+    background-color: #000;
 }
 
 &:hover ${CustomLink}{
     background-size: 100% 2px;
     background-position: 0% 100%;
-    color: #000;
+    color: #fff;
 }
 `;
 

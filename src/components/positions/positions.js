@@ -46,16 +46,6 @@ function Positions() {
                     </tbody>
                 </table>
             </Div>
-            <Footer>
-                <P>Feito por Ryan Paiva</P>
-                <A target="_blank" href="https://github.com/ryanpaiva/formula1-api" rel="noopener noreferrer">
-                    <i><FaGithub /></i>
-                </A>
-
-                <A target="_blank" href="https://www.linkedin.com/in/ryanpaiva05/" rel="noopener noreferrer">
-                    <i><FaLinkedinIn /></i>
-                </A>
-            </Footer>
         </DivBody>
     );
 }
@@ -63,11 +53,6 @@ function Positions() {
 const DivBody = styled.div`
 display: flex;
 justify-content: center;
-background-image: url('assets/images/backgroundImg.jpg');
-background-size: cover ;
-background-repeat: no-repeat;
-background-position: center center;
-height: 100vh;
 align-items: center;
 flex-direction: column; 
 
@@ -75,35 +60,6 @@ flex-direction: column;
     height: auto;
 }
 `
-
-const Footer = styled.footer`
-text-align: center;
-width: 100vw;
-padding: 20px;
-margin-top: 20px;
-`
-
-const P = styled.p`
-margin-bottom: 20px;
-`
-
-const A = styled.a`
-display: inline-block;
-    width: 40px;
-    height: 20px;
-    font-size: 1.8rem;
-    text-align: center;
-    margin: 0 6px;
-    border-radius: 50%;
-    transition: 0.3s ease-in-out;
-    color: #fff;
-
-&:hover {
-color: pink;
-transform: rotate(5deg);
-}
-`
-
 const Div = styled.div`
 background-color: #e5e5e5;
 padding: 20px;
