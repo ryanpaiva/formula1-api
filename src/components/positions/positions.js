@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 function Positions() {
     const [driverStandings, setDriverStandings] = useState([]);
@@ -14,7 +13,6 @@ function Positions() {
         const response = await fetch('https://ergast.com/api/f1/current/driverStandings.json');
         const data = await response.json();
         setDriverStandings(data.MRData.StandingsTable.StandingsLists[0].DriverStandings);
-        console.log(driverStandings);
     };
 
     return (
@@ -62,30 +60,30 @@ flex-direction: column;
 `
 const Div = styled.div`
 background-color: #e5e5e5;
-padding: 20px;
+padding: 10px;
 border-radius: 5px;
 opacity: 0.9;
 
 @media (max-width: 1280px) {
-    padding: 10px;
-    margin: 20px;
+    padding: 20px;
+    margin: 50px;
 }
 `
 
 const Th = styled.th`
 font-weight: 700;
 font-size: 18px;
-padding-bottom: 20px;
+padding-bottom: 10px;
 
 @media (max-width: 980px) {
-font-size: 16px;
+font-size: 14px;
 }
 `
 
 const Td = styled.td`
 padding: 5px 35px;
 text-align: center;
-font-size: 16px;
+font-size: 12px;
 
 @media (max-width: 980px) {
 padding: 5px 10px;
@@ -115,7 +113,8 @@ font-size: 14px;
 const H1 = styled.h1`
 text-align: center;
 font-weight: 700;
-margin-bottom: 30px;
+margin-bottom: 20px;
+font-size: 25px;
 `
 
 export { Positions }

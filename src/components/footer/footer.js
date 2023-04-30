@@ -18,8 +18,10 @@ const Footer = () => {
 
 const FOOTER = styled.footer`
 text-align: center;
-padding: 5px;
-margin-top: 20px;
+position: absolute;
+left: 50%;
+bottom: -1%;
+transform: translate(-50%, -50%);
 
 p {
     margin-bottom: 10px;
@@ -38,9 +40,18 @@ a {
     color: #fff;
 
 &:hover {
-color: pink;
+color: red;
 transform: rotate(5deg);
 }
+}
+
+@media (max-width: 1280px) {
+
+    display: none;
+
+    p {
+        color: #fff;
+    }
 }
 `
 

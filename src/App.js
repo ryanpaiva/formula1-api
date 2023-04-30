@@ -11,8 +11,6 @@ function App() {
 }
 
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
-
 * {
   margin: 0;
   padding: 0;   
@@ -26,10 +24,17 @@ const GlobalStyle = createGlobalStyle`
 
 body {
 background-image: url('./backgroundImg.jpg');
-background-size: cover ;
+background-size: cover;
 background-repeat: no-repeat;
 background-position: center center;
 height: 100vh;
+}
+
+@media (max-width: 1050px) {
+  body{
+  height: min-content;
+  background-image: url('./mobilebg.jpg');
+  }
 }
 
 ul {

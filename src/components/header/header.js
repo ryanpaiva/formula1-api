@@ -7,8 +7,8 @@ const HeaderMenu = () => {
     return (
         <Header className="header">
             <div className="header-container">
-                <Link to={'/'}>
-                    <img src={logo} />
+                <Link to='#'>
+                    <img src={logo} alt="logo" />
                 </Link>
 
                 <nav>
@@ -30,13 +30,12 @@ const HeaderMenu = () => {
 }
 
 const Header = styled.header`
-
 .header-container {
-    display: flex;
-    padding: 20px 40px;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 75px;
+display: flex;
+padding: 20px 40px;
+justify-content: space-between;
+align-items: center;
+min-height: 75px;
 }
 
 .header-container a img {

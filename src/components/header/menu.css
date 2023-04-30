@@ -6,7 +6,7 @@
     height: 60px;
 }
 
-.header .hamburguer {
+/*.header .hamburguer {
     background-color: #000;
     position: relative;
     display: block;
@@ -34,13 +34,13 @@
 
 .header .hamburguer:after {
     bottom: -10px;
-}
+} */
 
 .header input {
     display: none;
 }
 
-.header input:checked ~ label .hamburguer {
+/* .header input:checked ~ label .hamburguer {
     transform: rotate(45deg);
 }
 
@@ -91,4 +91,4 @@
         display: block;
         color: #000;
     }
-}
+} */
