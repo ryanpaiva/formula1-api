@@ -7,7 +7,7 @@ const HeaderMenu = () => {
     return (
         <Header className="header">
             <div className="header-container">
-                <Link to='#'>
+                <Link to='/'>
                     <img src={logo} alt="logo" />
                 </Link>
 
@@ -21,7 +21,7 @@ const HeaderMenu = () => {
                     </label>
 
                     <ul>
-                        <li><a href="#">Corridas</a></li>
+                        <li><Link to='/races'>Corridas</Link></li>
                     </ul>
                 </nav>
             </div>
@@ -62,6 +62,12 @@ transition: background-size 0.3s ease-in-out;
 nav ul li a:hover {
 background-size: 100% 2px;
 background-position: 0% 100%;
+}
+
+@media (max-width: 980px) {
+    ul li a {
+        display: none;
+    }
 }
 `
 

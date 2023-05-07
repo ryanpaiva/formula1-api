@@ -18,10 +18,10 @@ const Footer = () => {
 
 const FOOTER = styled.footer`
 text-align: center;
-position: absolute;
-left: 50%;
-bottom: -1%;
-transform: translate(-50%, -50%);
+margin-top: 15px;
+justify-content: center;
+flex-direction: column;
+align-items: center;
 
 p {
     margin-bottom: 10px;

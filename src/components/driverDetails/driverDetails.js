@@ -10,7 +10,7 @@ function DriverDetails() {
 
     useEffect(() => {
         fetchData();
-    }, []);
+    });
 
     const fetchData = async () => {
         const response = await fetch(`https://ergast.com/api/f1/current/drivers/${driverId}/driverStandings.json`);
@@ -31,7 +31,7 @@ function DriverDetails() {
                         <h1>{driver.Driver.givenName} {driver.Driver.familyName}</h1>
                     </DivName>
                     <ButtonName>
-                        <a target='_blank' href={driver.Driver.url}>Saiba mais sobre {driver.Driver.givenName} {driver.Driver.familyName}
+                        <a target='_blank' rel='noreferrer' href={driver.Driver.url}>Saiba mais sobre {driver.Driver.givenName} {driver.Driver.familyName}
                         </a>
                     </ButtonName>
                     <Table>
@@ -62,6 +62,8 @@ function DriverDetails() {
                             </tr>
                         </tbody>
                     </Table>
+
+                    <h6>As atualizações podem demorar até 24h Horas</h6>
                 </Div>
                 <ButtonHome>
                     <CustomLink to='/'>Voltar ao menu</CustomLink>
@@ -90,8 +92,7 @@ p {
     padding: 10px;
     text-decoration: underline;
     text-decoration-color: red;
-}
-`
+}`
 
 const DivBody = styled.div`
 display: flex;
@@ -110,6 +111,10 @@ background-color: #e5e5e5;
 padding: 25px;
 border-radius: 5px;
 opacity: 0.9;
+
+h6 {
+    color: red;
+}
 `
 
 const DivName = styled.div`
@@ -126,24 +131,19 @@ const ButtonName = styled.button`
     border: 1px solid #000;
     transition: 0.3s ease-in;
 
-    &:hover{
-    background-color: #000;
-}
-
-&:hover a{
-    background-size: 100% 2px;
-    background-position: 0% 100%;
+    a{
     color: #fff;
-}
-
-a{
-    color: #000;
     background-image: linear-gradient(to right, red, red);
     background-repeat: no-repeat;
     background-size: 0% 2px;
     background-position: 0% 100%;
     transition: background-size 0.3s ease-in-out;
     }
+
+&:hover a{
+    background-size: 100% 2px;
+    background-position: 0% 100%;
+}
 `
 
 const Table = styled.table`

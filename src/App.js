@@ -27,13 +27,14 @@ background-image: url('./backgroundImg.jpg');
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center center;
-height: 100vh;
+min-height: 100vh;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1024px) {
   body{
   height: min-content;
   background-image: url('./mobilebg.jpg');
+  background-size: 100vmax;
   }
 }
 
@@ -44,6 +45,22 @@ ul {
 img {
     max-width: 100%;
 }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: red;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #000;
+  }
 `
 
 export default App;

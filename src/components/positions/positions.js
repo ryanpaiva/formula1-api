@@ -19,6 +19,7 @@ function Positions() {
         <DivBody className='position-box'>
             <Div>
                 <H1>Classificação de Pilotos:</H1>
+                <h6>As atualizações podem demorar até 24h Horas</h6>
                 <table>
                     <thead>
                         <tr>
@@ -54,6 +55,11 @@ justify-content: center;
 align-items: center;
 flex-direction: column; 
 
+h6 {
+    text-align: center;
+    color: red;
+}
+
 @media (max-width: 1280px) {
     height: auto;
 }
@@ -65,7 +71,7 @@ border-radius: 5px;
 opacity: 0.9;
 
 @media (max-width: 1280px) {
-    padding: 20px;
+    padding: 15px;
     margin: 50px;
 }
 `
