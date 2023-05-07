@@ -10,7 +10,7 @@ function DriverDetails() {
 
     useEffect(() => {
         fetchData();
-    });
+    }, []);
 
     const fetchData = async () => {
         const response = await fetch(`https://ergast.com/api/f1/current/drivers/${driverId}/driverStandings.json`);
