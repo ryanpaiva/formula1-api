@@ -125,24 +125,25 @@ align-items: center;
 `
 
 const ButtonName = styled.button`
-    padding: 10px;
-    margin: 20px 0;
-    border-radius: 15px;
-    border: 1px solid #000;
-    transition: 0.3s ease-in;
+background-color: #000;
+padding: 10px;
+margin: 20px 0;
+border-radius: 15px;
+border: 1px solid #000;
+transition: 0.3s ease-in;
 
-    a{
-    color: #fff;
-    background-image: linear-gradient(to right, red, red);
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    background-position: 0% 100%;
-    transition: background-size 0.3s ease-in-out;
-    }
+a{
+color: #fff;
+background-image: linear-gradient(to right, red, red);
+background-repeat: no-repeat;
+background-size: 0% 2px;
+background-position: 0% 100%;
+transition: background-size 0.3s ease-in-out;
+}
 
 &:hover a{
-    background-size: 100% 2px;
-    background-position: 0% 100%;
+background-size: 100% 2px;
+background-position: 0% 100%;
 }
 `
 

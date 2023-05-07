@@ -72,7 +72,7 @@ opacity: 0.9;
 
 @media (max-width: 1280px) {
     padding: 15px;
-    margin: 50px;
+    margin: 55px;
 }
 `
 
